@@ -11,3 +11,22 @@
   font-size: 2rem;
   text-align: center;
 }
+
+.hangman-drawing {
+  position: relative;
+}
+
+#bottomBar{
+  height: 10px;
+  width: 250px;
+  background: black;
+}
+
+#firstUpright{
+  height: 400px;
+  width: 10px;
+  background: black;
+  margin-left: 120px;
+  /* 120 px is 250 / 2 and then minus 10/2 which is the bar */
+
+}

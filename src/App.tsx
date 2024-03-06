@@ -1,5 +1,8 @@
 import { useState } from "react"
 import words from "../wordList.json"
+import { HangmanDrawing } from "./components/HangmanDrawing"
+import { HangmanWord } from "./components/HangmanWord"
+import { Keyboard } from "./components/Keyboard"
 // import "./App.css"
 
 function App() {
@@ -14,6 +17,7 @@ function App() {
       <div className="gameResult">Lose Win</div>
       <HangmanDrawing />
       <HangmanWord />
+      <Keyboard />
     </div>
   )
 }
