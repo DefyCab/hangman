@@ -45,3 +45,15 @@
   top: 0;
   right: 0;
 }
+
+#HEAD {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color:black;
+  border-width: 6px;
+  position: absolute;
+  top: 50px;
+  right: -26px;
+}
