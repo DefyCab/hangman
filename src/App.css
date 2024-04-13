@@ -57,3 +57,12 @@
   top: 50px;
   right: -26px;
 }
+
+#BODY {
+  width: 6px;
+  height: 100px;
+  position: absolute;
+  background: black;
+  top: 110px;
+  right: 0px;
+}
