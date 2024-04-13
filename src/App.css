@@ -72,10 +72,23 @@
   height: 6px;
   position: absolute;
   background: blue;
-  top: 130px;
+  top: 134px;
   right: -100px;
   rotate: -30deg;
   /* transform origin gör så att armen roterar vid basen */
   transform-origin: left bottom;
+
+}
+
+#LEFT_ARM {
+  width: 100px;
+  height: 6px;
+  position: absolute;
+  background: blue;
+  top: 134px;
+  right: 6px;
+  rotate: 30deg;
+  /* transform origin gör så att armen roterar vid basen */
+  transform-origin: right bottom;
 
 }
