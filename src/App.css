@@ -28,5 +28,20 @@
   background: black;
   margin-left: 120px;
   /* 120 px is 250 / 2 and then minus 10/2 which is the bar */
+}
 
+#horizontalBar {
+  height: 10px;
+  width: 200px;
+  background: black;
+  margin-left: 120px;
+}
+
+#smallVerticalBar {
+  height: 50px;
+  width: 10px;
+  background: black;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
