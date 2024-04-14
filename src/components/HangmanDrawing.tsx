@@ -14,12 +14,17 @@ const LEFT_ARM = (
     <div id="LEFT_ARM"></div>
 )
 
+const RIGHT_LEG = (
+    <div id="RIGHT_LEG"></div>
+)
+
 export function HangmanDrawing() {
     return <div className="hangman-drawing">
         {HEAD}
         {BODY}
         {RIGHT_ARM}
         {LEFT_ARM}
+        {RIGHT_LEG}
 
         <div id="smallVerticalBar"></div>
         <div id="horizontalBar"></div>
