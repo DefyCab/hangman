@@ -18,6 +18,10 @@ const RIGHT_LEG = (
     <div id="RIGHT_LEG"></div>
 )
 
+const LEFT_LEG = (
+    <div id="LEFT_LEG"></div>
+)
+
 export function HangmanDrawing() {
     return <div className="hangman-drawing">
         {HEAD}
@@ -25,6 +29,7 @@ export function HangmanDrawing() {
         {RIGHT_ARM}
         {LEFT_ARM}
         {RIGHT_LEG}
+        {LEFT_LEG}
 
         <div id="smallVerticalBar"></div>
         <div id="horizontalBar"></div>

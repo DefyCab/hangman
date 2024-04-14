@@ -99,7 +99,16 @@
   top: 255px;
   right: -82px;
   rotate: 30deg;
-  /* transform origin gör så att armen roterar vid basen */
   transform-origin: right bottom;
+}
 
+#LEFT_LEG {
+  width: 100px;
+  height: 6px;
+  position: absolute;
+  background: blue;
+  top: 255px;
+  right: -10px;
+  rotate: -30deg;
+  transform-origin: left bottom;
 }
