@@ -16,6 +16,8 @@
   position: relative;
 }
 
+/* HANGMAN DRAWING */
+
 #bottomBar{
   height: 10px;
   width: 250px;
@@ -111,4 +113,19 @@
   right: -10px;
   rotate: -30deg;
   transform-origin: left bottom;
+}
+
+/* HANGMAN WORD */
+
+.hangmanWordDiv {
+  display: flex;
+  gap: .25em;
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: upperCase;
+  font-family: monospace;
+}
+
+#displayWord {
+border-bottom: .1em solid black;
 }
