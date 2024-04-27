@@ -1,6 +1,7 @@
+const word = "test"
+const guessedLetters = ["t"]
+
 export function HangmanWord() {
-  const word = "test"
-  const guessedLetters = ["t"]
   return (
     <div className="hangmanWordDiv">
       {word.split("").map((letter, index) => (
