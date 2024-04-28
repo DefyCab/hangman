@@ -1,10 +1,12 @@
-const word = "test"
-const guessedLetters = ["t"]
+type HangmanWordProps = {
+  guessedLetters: string[]
+  wordToGuess: string
+}
 
-export function HangmanWord() {
+export function HangmanWord({ guessedLetters, wordToGuess }: HangmanWordProps) {
   return (
     <div className="hangmanWordDiv">
-      {word.split("").map((letter, index) => (
+      {wordToGuess.split("").map((letter, index) => (
         <span id="displayWord">
           <span
             style={{

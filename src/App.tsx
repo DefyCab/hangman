@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 import words from "../wordList.json"
 import { HangmanDrawing } from "./components/HangmanDrawing"
 import { HangmanWord } from "./components/HangmanWord"
@@ -16,11 +16,37 @@ function App() {
     (letter) => !wordToGuess.includes(letter)
   )
 
+  const addGuessedLetter = useCallback(
+    (letter: string) => {
+      if (guessedLetters.includes(letter)) return
+
+      setGuessedLetters((currentLetters) => [...currentLetters, letter])
+    },
+    [guessedLetters]
+  )
+
+  useEffect(() => {
+    const handler = (event: KeyboardEvent) => {
+      const key = event.key
+      // om tangentenn inte finns mellan az returnera inget
+      if (!key.match(/^[a-z]$/)) return
+
+      event.preventDefault()
+      addGuessedLetter(key)
+    }
+
+    document.addEventListener("keypress", handler)
+
+    return () => {
+      document.removeEventListener("keypress", handler)
+    }
+  })
+
   return (
     <div className="container">
       <div className="gameResult">Lose Win</div>
       <HangmanDrawing numberOfGuesses={inCorrectLetters.length} />
-      <HangmanWord />
+      <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
       <Keyboard />
     </div>
   )
