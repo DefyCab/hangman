@@ -16,6 +16,11 @@ function App() {
     (letter) => !wordToGuess.includes(letter)
   )
 
+  const isLoser = inCorrectLetters.length >= 6
+  // om vilkoret i every uppfylls av varje instans returns true
+  const isWinner = wordToGuess.split("").every(letter => guessedLetters.includes(letter))
+
+
   const addGuessedLetter = useCallback(
     (letter: string) => {
       if (guessedLetters.includes(letter)) return
@@ -42,12 +47,17 @@ function App() {
     }
   })
 
+  // klammarna markerar if-statement
   return (
     <div className="container">
-      <div className="gameResult">Lose Win</div>
+      <div className="gameResult">
+        {isLoser && "You lose!"}
+        {isWinner && "You won!"}
+      </div>
       <HangmanDrawing numberOfGuesses={inCorrectLetters.length} />
       <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
       <Keyboard
+      disableKeyboard={isWinner || isLoser}
         activeLetters={guessedLetters.filter((letter) =>
           wordToGuess.includes(letter)
         )}
