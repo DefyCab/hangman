@@ -130,6 +130,13 @@
 border-bottom: .1em solid black;
 }
 
+.showCorrectWord {
+  color: purple;
+  font-size: 3rem;
+  text-transform: upperCase;
+  font-weight: bold;
+}
+
 /* KEYBOARD */
 
 .keyGrid {

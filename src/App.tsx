@@ -5,6 +5,12 @@ import { HangmanWord } from "./components/HangmanWord"
 import { Keyboard } from "./components/Keyboard"
 // import "./App.css"
 
+
+// TODOLIST:
+
+// Visa ordet när man förlorar.
+// Roliga vinst och förlustmeddelande,
+
 function App() {
   const [wordToGuess, setWordToGuess] = useState(() => {
     return words[Math.floor(Math.random() * words.length)]
@@ -56,6 +62,13 @@ function App() {
       </div>
       <HangmanDrawing numberOfGuesses={inCorrectLetters.length} />
       <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
+      <div className="showCorrectWord"
+       style={{
+        visibility: isLoser
+          ? "visible"
+          : "hidden",
+      }}
+      >{wordToGuess}</div>
       <Keyboard
       disableKeyboard={isWinner || isLoser}
         activeLetters={guessedLetters.filter((letter) =>
